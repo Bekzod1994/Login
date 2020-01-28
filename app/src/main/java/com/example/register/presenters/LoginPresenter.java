@@ -34,6 +34,9 @@ public class LoginPresenter implements LoginContract.Presenter {
     public LoginPresenter( LoginContract.View view,LoginContract.Model model) {
         this.model = model;
         this.view = view;
+
+
+        
        networkConnection();
     }
 

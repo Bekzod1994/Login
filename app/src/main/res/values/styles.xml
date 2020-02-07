@@ -19,7 +19,7 @@
 <!--        <item name="colorOnBackground">@color/my_app_color_on_background</item>-->
 <!--        <item name="colorOnError">@color/my_app_color_on_error</item>-->
 <!--        <item name="colorOnSurface">@color/my_app_color_on_surface</item>-->
-        <item name="scrimBackground">@color/mtrl_scrim_color</item>
+        <item name="scrimBackground">@color/primaryColor</item>
         <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2</item>
         <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3</item>
@@ -35,5 +35,17 @@
         <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
 
     </style>
+
+
+        <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+            <item name="colorPrimary">@color/primaryColor</item>
+            <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+            <item name="colorSecondary">@color/primaryLightColor</item>
+            <item name="android:colorBackground">@color/white</item>
+            <item name="colorError">@color/red</item>
+
+        </style>
+
+
 
 </resources>

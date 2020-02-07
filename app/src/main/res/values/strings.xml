@@ -7,4 +7,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_c_label">Tab2</string>
     <string name="tab_b_label">Tab1</string>
+    <string name="income">приход</string>
+    <string name="outcome">расход</string>
+    <string name="currency">%.1f sum</string>
+    <string name="balance">Баланс Компании</string>
 </resources>

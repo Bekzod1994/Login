@@ -1,20 +1,20 @@
 package com.example.register.contracts;
 
-import com.example.register.models.LoginDto;
+        import com.example.register.models.loginData.LoginDto;
 
 public interface LoginContract {
     interface Model{
 
     }
     interface View{
-        void showLoginError();
-        void showPasswordError();
+        void startMain();
+        void showError(String message);
+        void setSpinnerVisible(int visible);
+
 
 
     }
     interface Presenter{
         void loginClick(LoginDto loginDto);
-
-
     }
 }

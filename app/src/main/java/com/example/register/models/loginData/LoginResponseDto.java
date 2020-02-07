@@ -1,4 +1,4 @@
-package com.example.register.models;
+package com.example.register.models.loginData;
 
 public class LoginResponseDto {
     private String accessToken;

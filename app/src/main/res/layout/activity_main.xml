@@ -1,59 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/frameLayout"
-    tools:context=".views.MainActivity">
+    android:orientation="vertical">
+
     <TextView
-        android:id="@+id/textView"
+        android:clickable="true"
+        android:textColor="@color/primaryColor"
+        android:textSize="24sp"
+        android:id="@+id/companyName"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/balance"
+        android:paddingTop="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tabLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/companyBalance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="16dp"
-        android:textColor="@color/primaryLightColor"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/tabs"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:padding="8dp"
+        android:textColor="@color/primaryColor"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/tabLayout"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/app_name" />
+        app:layout_constraintTop_toBottomOf="@id/companyName" />
+
 
     <com.google.android.material.tabs.TabLayout
-
-        android:id="@+id/tabs"
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        tools:layout_editor_absoluteX="0dp">
-
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/input"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/tab_b_label" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/output"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/tab_c_label" />
+        android:minHeight="?actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/companyBalance">
 
     </com.google.android.material.tabs.TabLayout>
 
-<!--    <android.support.v4.view.ViewPager-->
-<!--        android:id="@+id/viewPager"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tabs">-->
 
-<!--    </android.support.v4.view.ViewPager>-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_constraintVertical_bias="0.0">
 
+    </androidx.viewpager.widget.ViewPager>
 
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
